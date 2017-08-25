@@ -40,12 +40,12 @@ void MoonlightInstance::OnConnectionStarted(uint32_t unused) {
     PostMessage(response);
     
     // Start receiving input events
-    RequestInputEvents(PP_INPUTEVENT_CLASS_MOUSE | PP_INPUTEVENT_CLASS_WHEEL);
+    //RequestInputEvents(PP_INPUTEVENT_CLASS_MOUSE | PP_INPUTEVENT_CLASS_WHEEL);
     
     // Filtering is suboptimal but it ensures that we can pass keyboard events
     // to the browser when mouse lock is disabled. This is neccessary for Esc
     // to kick the app out of full-screen.
-    RequestFilteringInputEvents(PP_INPUTEVENT_CLASS_KEYBOARD);
+    //RequestFilteringInputEvents(PP_INPUTEVENT_CLASS_KEYBOARD);
 }
 
 void MoonlightInstance::OnConnectionStopped(uint32_t error) {
@@ -53,7 +53,7 @@ void MoonlightInstance::OnConnectionStopped(uint32_t error) {
     m_Running = false;
     
     // Stop receiving input events
-    ClearInputEventRequest(PP_INPUTEVENT_CLASS_MOUSE | PP_INPUTEVENT_CLASS_WHEEL | PP_INPUTEVENT_CLASS_KEYBOARD);
+    //ClearInputEventRequest(PP_INPUTEVENT_CLASS_MOUSE | PP_INPUTEVENT_CLASS_WHEEL | PP_INPUTEVENT_CLASS_KEYBOARD);
     
     // Unlock the mouse
     UnlockMouse();
@@ -85,7 +85,7 @@ void* MoonlightInstance::StopThreadFunc(void* context) {
 
     // We also need to stop this thread after the connection thread, because it depends
     // on being initialized there.
-    pthread_join(g_Instance->m_InputThread, NULL);
+    //pthread_join(g_Instance->m_InputThread, NULL);
 
     // Stop the connection
     LiStopConnection();
@@ -136,7 +136,7 @@ void* MoonlightInstance::ConnectionThreadFunc(void* context) {
     // Set running state before starting connection-specific threads
     me->m_Running = true;
     
-    pthread_create(&me->m_InputThread, NULL, MoonlightInstance::InputThreadFunc, me);
+    //pthread_create(&me->m_InputThread, NULL, MoonlightInstance::InputThreadFunc, me);
     
     return NULL;
 }
