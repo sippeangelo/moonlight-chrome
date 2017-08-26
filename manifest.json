@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "Moonlight Game Streaming",
+    "name": "Moonlight Game Streaming NoInput",
     "short_name": "Moonlight",
     "version": "0.7.3",
     "description": "Open-source client for NVIDIA GameStream",
