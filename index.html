@@ -21,7 +21,6 @@
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation -->
             <nav class="mdl-navigation">
-
                     <div class="nav-menu-parent">
                         <div id="resolutionMenu">
                             <button id="selectResolution" data-value="1280:720" class="mdl-button mdl-js-button">
@@ -40,7 +39,6 @@
                             Resolution
                         </div>
                     </div>
-
                     <div class="nav-menu-parent">
                         <div id="framerateMenu">
                             <button id="selectFramerate" data-value="60" class="mdl-button mdl-js-button">
@@ -73,12 +71,24 @@
                         </div>
                     </div>
 
-                    <label id="externalAudioBtn" class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="remoteAudioEnabledSwitch">
-                        <input type="checkbox" id="remoteAudioEnabledSwitch" class="mdl-icon-toggle__input">
-                        <i class="mdl-icon-toggle__label material-icons">volume_up</i>
-                    </label>
-                    <div id="externalAudioTooltip" class="mdl-tooltip" for="externalAudioBtn">
-                        Remote audio
+                    <div class="nav-menu-parent">
+                        <label id="externalAudioBtn" class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="remoteAudioEnabledSwitch">
+                            <input type="checkbox" id="remoteAudioEnabledSwitch" class="mdl-icon-toggle__input">
+                            <i class="mdl-icon-toggle__label material-icons">volume_up</i>
+                        </label>
+                        <div id="externalAudioTooltip" class="mdl-tooltip" for="externalAudioBtn">
+                            Play audio on the host PC speakers
+                        </div>
+                    </div>
+
+                    <div class="nav-menu-parent">
+                        <label id="optimizeGamesBtn" class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="optimizeGamesSwitch">
+                            <input type="checkbox" id="optimizeGamesSwitch" class="mdl-icon-toggle__input">
+                            <i class="mdl-icon-toggle__label material-icons">timeline</i>
+                        </label>
+                        <div id="optimizeGamesTooltip" class="mdl-tooltip" for="optimizeGamesBtn">
+                            Allow GeForce Experience to optimize game settings for streaming
+                        </div>
                     </div>
 
                     <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" id="quitCurrentApp" aria-label="Quit current app">
